@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRAMA</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="./drama.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <div>
+        <nav>
+            <div class="parent ">
+                <div class="img">
+
+                </div>
+                <div class="navDiv1">
+                    <a href="#" id="home" class="nav1">
+                        <i class="fas fa-home"></i>
+                    </a>
+                    <a class="nav1" href="../index.html">All</a>
+                    <a class="nav1" href="../index.html#drama">Drama</a>
+                    <a class="nav1" href="../index.html#songs">Songs</a>
+                </div>
+                <div id="s">
+                    <input type="search" name="search" id="search"> <label for="search" id="Slabel">Search</label>
+                </div>
+                <div class="navDiv">
+                    <a class="navA" href="#">Contact</a>
+                    <a class="navA" href="#">Home</a>
+                    <a class="navA" href="#">About us</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="main-video">
+            <a id="back" href="../index.html"> <i class="fas fa-arrow-left"></i> Back</a>
+            <div class="video ">
+                <video src="../Videos/Put your head on my shoulder EP 01【Hindi_Urdu Audio】 Full episode in hindi _ Chinese drama.mp4" controls muted autoplay></video>
+                <h3 class="title" >Put Your Head On My shoulder <p>EP 01</p></h3>
+            </div>
+        </div>
+        <div class="video-list">
+             <div class="vid active">
+                <video src="../Videos/Put your head on my shoulder EP 01【Hindi_Urdu Audio】 Full episode in hindi _ Chinese drama.mp4">
+                </video>
+                <h3 class="title" >Put Your Head On My shoulder <p>EP 01</p></h3>
+                
+             </div>
+             <div class="vid">
+                <video src="../Videos/Put your head on my shoulder EP 02【Hindi_Urdu Audio】 Full episode in hindi _ Chinese drama.mp4"></video>
+                <h3 class="title" >Put Your Head On My shoulder <p>EP 02</p></h3>
+                
+             </div>
+             <div class="vid">
+                <video src="../Videos/Put your head on my shoulder EP 03【Hindi_Urdu Audio】 Full episode in hindi _ Chinese drama.mp4"></video>
+                <h3 class="title" >Put Your Head On My shoulder <p>EP 03</p></h3>
+                
+             </div>
+             <div class="vid">
+                <video src="../Videos/Put your head on my shoulder EP 04【Hindi_Urdu Audio】 Full episode in hindi _ Chinese drama.mp4"></video>
+                <h3 class="title" >Put Your Head On My shoulder  <p>EP 04</p></h3>
+               
+             </div>
+             <div class="vid">
+                <video src="../Videos/Put your head on my shoulder EP 05【Hindi_Urdu Audio】 Full episode in hindi _ Chinese drama.mp4"></video>
+                <h3 class="title" >Put Your Head On My shoulder<p>EP 05</p></h3>
+             </div>
+        </div>
+    </div>
+</body>
+
+<script>
+     let listVideo=document.querySelectorAll('.video-list .vid');
+     let mainVideo=document.querySelector('.main-video video');
+     let title=document.querySelector('.main-video .title');
+
+     listVideo.forEach(video=>{
+          video.onclick= () =>{
+            listVideo.forEach(vid=>vid.classList.remove("active"))
+            video.classList.add('active')
+            if(video.classList.contains('active')){
+                 let src= video.children[0].getAttribute('src');
+                 mainVideo.src=src;
+                 let text=video.children[1].innerHTML;
+                 title.innerHTML=text;
+            }
+          }
+     });
+
+</script>
+</html>

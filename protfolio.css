@@ -1,0 +1,26 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#nav{
+    height: 10vh;
+    width: 100%;
+    background-color: blue;
+}
+#img{
+    height: 120vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url("./IMG20231121130711.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid;
+}
+
+#name{
+    margin: 120px 0px 0px 150px ;
+    font-size: 70px;
+    /* backdrop-filter: blur(10px); */
+    width: 600px;
+    color: wheat;
+}
